@@ -1,0 +1,14 @@
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\obj\Debug\ServiceStation.DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\bin\Debug\ServiceStation.DataAccessLayer.dll.config
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\bin\Debug\ServiceStation.DataAccessLayer.dll
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\bin\Debug\ServiceStation.DataAccessLayer.pdb
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\bin\Debug\ServiceStation.Models.dll
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\bin\Debug\ServiceStation.Models.pdb
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\obj\Debug\ServiceStation.DataAccessLayer.dll
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\obj\Debug\ServiceStation.DataAccessLayer.pdb
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\obj\Debug\ServiceStation.DataAccessLayer.Migrations.Init.resources
+D:\Intetics\ServiceStation\ServiceStation.DataAccessLayer\obj\Debug\ServiceStation.DataAccessLayer.csproj.GenerateResource.Cache

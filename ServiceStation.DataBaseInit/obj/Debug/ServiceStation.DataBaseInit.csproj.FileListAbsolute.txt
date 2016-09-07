@@ -1,0 +1,6 @@
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataBaseInit.exe.config
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataBaseInit.exe
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataBaseInit.pdb
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\obj\Debug\ServiceStation.DataBaseInit.csprojResolveAssemblyReference.cache
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\obj\Debug\ServiceStation.DataBaseInit.exe
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\obj\Debug\ServiceStation.DataBaseInit.pdb

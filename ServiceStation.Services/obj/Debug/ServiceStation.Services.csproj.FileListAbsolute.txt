@@ -1,0 +1,5 @@
+D:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.Services.dll
+D:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.Services.pdb
+D:\Intetics\ServiceStation\ServiceStation.Services\obj\Debug\ServiceStation.Services.csprojResolveAssemblyReference.cache
+D:\Intetics\ServiceStation\ServiceStation.Services\obj\Debug\ServiceStation.Services.dll
+D:\Intetics\ServiceStation\ServiceStation.Services\obj\Debug\ServiceStation.Services.pdb

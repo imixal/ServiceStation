@@ -16,8 +16,11 @@ namespace ServiceStation.DataAccessLayer.Migrations
                         Model = c.String(),
                         Year = c.Int(nullable: false),
                         VIN = c.String(),
+                        ClientAuto_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Clients", t => t.ClientAuto_Id)
+                .Index(t => t.ClientAuto_Id);
             
             CreateTable(
                 "dbo.Clients",
@@ -50,32 +53,16 @@ namespace ServiceStation.DataAccessLayer.Migrations
                 .Index(t => t.OrderAuto_Id)
                 .Index(t => t.OrderClient_Id);
             
-            CreateTable(
-                "dbo.ClientAutoes",
-                c => new
-                    {
-                        Client_Id = c.Int(nullable: false),
-                        Auto_Id = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => new { t.Client_Id, t.Auto_Id })
-                .ForeignKey("dbo.Clients", t => t.Client_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Autoes", t => t.Auto_Id, cascadeDelete: true)
-                .Index(t => t.Client_Id)
-                .Index(t => t.Auto_Id);
-            
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Orders", "OrderClient_Id", "dbo.Clients");
             DropForeignKey("dbo.Orders", "OrderAuto_Id", "dbo.Autoes");
-            DropForeignKey("dbo.ClientAutoes", "Auto_Id", "dbo.Autoes");
-            DropForeignKey("dbo.ClientAutoes", "Client_Id", "dbo.Clients");
-            DropIndex("dbo.ClientAutoes", new[] { "Auto_Id" });
-            DropIndex("dbo.ClientAutoes", new[] { "Client_Id" });
+            DropForeignKey("dbo.Autoes", "ClientAuto_Id", "dbo.Clients");
             DropIndex("dbo.Orders", new[] { "OrderClient_Id" });
             DropIndex("dbo.Orders", new[] { "OrderAuto_Id" });
-            DropTable("dbo.ClientAutoes");
+            DropIndex("dbo.Autoes", new[] { "ClientAuto_Id" });
             DropTable("dbo.Orders");
             DropTable("dbo.Clients");
             DropTable("dbo.Autoes");

@@ -51,9 +51,9 @@
   <ItemGroup>
     <Compile Include="Context\DataBaseContext.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201609070958401_Init.cs" />
-    <Compile Include="Migrations\201609070958401_Init.Designer.cs">
-      <DependentUpon>201609070958401_Init.cs</DependentUpon>
+    <Compile Include="Migrations\201609071157378_Init.cs" />
+    <Compile Include="Migrations\201609071157378_Init.Designer.cs">
+      <DependentUpon>201609071157378_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +74,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609070958401_Init.resx">
-      <DependentUpon>201609070958401_Init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201609071157378_Init.resx">
+      <DependentUpon>201609071157378_Init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

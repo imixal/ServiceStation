@@ -12,7 +12,7 @@ namespace ServiceStation.Models
 
         public string VIN { get; set; }
 
-        public ICollection<Client> Clients { get; set; }
+        public Client ClientAuto { get; set; }
          
         public ICollection<Order> Orders { get; set; }
 

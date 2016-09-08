@@ -4,3 +4,11 @@ D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.
 D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\obj\Debug\ServiceStation.DataBaseInit.csprojResolveAssemblyReference.cache
 D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\obj\Debug\ServiceStation.DataBaseInit.exe
 D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\obj\Debug\ServiceStation.DataBaseInit.pdb
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataAccessLayer.dll
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.Models.dll
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.dll
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataAccessLayer.pdb
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.Models.pdb
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.xml
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.SqlServer.dll
+D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.SqlServer.xml

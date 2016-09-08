@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ServiceStation.DataAccessLayer.UnitOfWork
 {
-    class UnitOfWork : IDisposable
+    public class UnitOfWork : IDisposable
     {
         private DataBaseContext _db;
         private bool _disposed = false;

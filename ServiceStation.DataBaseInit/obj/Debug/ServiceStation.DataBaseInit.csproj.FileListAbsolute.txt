@@ -12,3 +12,17 @@ D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.
 D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.xml
 D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.SqlServer.dll
 D:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.SqlServer.xml
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataBaseInit.exe.config
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\obj\Debug\ServiceStation.DataBaseInit.exe
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\obj\Debug\ServiceStation.DataBaseInit.pdb
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataBaseInit.exe
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataBaseInit.pdb
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.dll
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.SqlServer.dll
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataAccessLayer.dll
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.Models.dll
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.DataAccessLayer.pdb
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\ServiceStation.Models.pdb
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.xml
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\bin\Debug\EntityFramework.SqlServer.xml
+E:\Intetics\ServiceStation\ServiceStation.DataBaseInit\obj\Debug\ServiceStation.DataBaseInit.csprojResolveAssemblyReference.cache

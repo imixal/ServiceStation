@@ -5,9 +5,10 @@
     src: url('../fonts/Oswald-Regular.ttf');
 
 }*/
-h1,h2,h3,h4,h5,h6,li,label,p{
+h1,h2,h3,h4,h5,h6,li,label,p,th,button{
     font-family: 'Oswald', sans-serif;
-    font-family: 'Oswald', sans-serif;
+    font-weight:400;
+    font-size:15px;
 }
 h2{
     font-weight:700;
@@ -22,4 +23,41 @@ li{
 .container{
     padding: 50px;
 }
-
+#preloder{
+    display:none;
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index:10;
+}
+.right{
+    display:inline;
+    text-align:right;
+}
+.panel-body strong{
+    font-weight:700;
+    margin:0 5px;
+}
+.panel-body{
+    padding:20px;
+    position:relative;
+}
+.Go-Account{
+    position:absolute;
+    right: 10px;
+    bottom: 10px;
+}
+#Account-wrapper{
+    margin-top:30px;
+}
+a:hover{
+    cursor:pointer;
+}
+.btn-sm{
+    padding:2px;
+    
+}
+tr{
+    height:30px;
+     vertical-align:middle;
+}

@@ -1,1 +1,17 @@
-﻿
+﻿<h2>Registered Clients</h2>
+@foreach (var client in ViewBag.clients)
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#@client.Id">@client.FirstName @client.LastName</a></h4>
+            
+        </div>
+        <div id="@client.Id"  class="panel-collapse collapse">
+            <div class="panel-body">
+                <p><strong>@client.FirstName @client.LastName</strong> Date Of Birth: <strong>@client.DateOfBirth</strong> Address: <strong>@client.Address</strong> Phone: <strong>@client.Phone</strong> Email: <strong>@client.Email</strong></p>
+                <a data-id="@client.Id" data-name="@client.FirstName" data-surname="@client.LastName" class="Go-Account btn btn-default ">Account</a>
+            </div>
+        </div>
+    </div>
+}
+

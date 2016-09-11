@@ -35,8 +35,14 @@ namespace ServiceStation.DataAccessLayer.Repository
         {
             return new List<T>(Context.Set<T>());
         }
-
-
+        public virtual T GetById(int id)
+        {
+            return Context.Set<T>().First(item => item.Id == id);
+        }
+        public virtual List<T> GetItems(int skip, int take)
+        {
+            return new List<T>(Context.Set<T>().OrderByDescending(item => item.Id).Skip(skip).Take(take));
+        }
         protected IQueryable<T> GetAllQuery()
         {
             return Context.Set<T>();

@@ -23,11 +23,13 @@ namespace ServiceStation
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
-                    "~/Script/script.js"));
+                    "~/Scripts/moment.js",
+                    "~/Scripts/datapicker.js",
+                    "~/Scripts/script.js"));
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/bootstrap-datetimepicker.min.css"));
+                      "~/Content/datapicker.css"));
             
         }
     }

@@ -3,3 +3,17 @@ D:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.Serv
 D:\Intetics\ServiceStation\ServiceStation.Services\obj\Debug\ServiceStation.Services.csprojResolveAssemblyReference.cache
 D:\Intetics\ServiceStation\ServiceStation.Services\obj\Debug\ServiceStation.Services.dll
 D:\Intetics\ServiceStation\ServiceStation.Services\obj\Debug\ServiceStation.Services.pdb
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.Services.dll
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.Services.pdb
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.DataAccessLayer.dll
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.Models.dll
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\EntityFramework.dll
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.DataAccessLayer.pdb
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.Models.pdb
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\EntityFramework.xml
+E:\Intetics\ServiceStation\ServiceStation.Services\obj\Debug\ServiceStation.Services.csprojResolveAssemblyReference.cache
+E:\Intetics\ServiceStation\ServiceStation.Services\obj\Debug\ServiceStation.Services.dll
+E:\Intetics\ServiceStation\ServiceStation.Services\obj\Debug\ServiceStation.Services.pdb
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\ServiceStation.Services.dll.config
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\EntityFramework.SqlServer.dll
+E:\Intetics\ServiceStation\ServiceStation.Services\bin\Debug\EntityFramework.SqlServer.xml

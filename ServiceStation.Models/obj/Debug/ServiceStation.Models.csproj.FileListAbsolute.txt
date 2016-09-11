@@ -3,3 +3,7 @@ D:\Intetics\ServiceStation\ServiceStation.Models\bin\Debug\ServiceStation.Models
 D:\Intetics\ServiceStation\ServiceStation.Models\obj\Debug\ServiceStation.Models.csprojResolveAssemblyReference.cache
 D:\Intetics\ServiceStation\ServiceStation.Models\obj\Debug\ServiceStation.Models.dll
 D:\Intetics\ServiceStation\ServiceStation.Models\obj\Debug\ServiceStation.Models.pdb
+E:\Intetics\ServiceStation\ServiceStation.Models\bin\Debug\ServiceStation.Models.dll
+E:\Intetics\ServiceStation\ServiceStation.Models\bin\Debug\ServiceStation.Models.pdb
+E:\Intetics\ServiceStation\ServiceStation.Models\obj\Debug\ServiceStation.Models.dll
+E:\Intetics\ServiceStation\ServiceStation.Models\obj\Debug\ServiceStation.Models.pdb

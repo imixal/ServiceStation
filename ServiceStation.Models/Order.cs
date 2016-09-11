@@ -1,8 +1,10 @@
-﻿namespace ServiceStation.Models
+﻿using System;
+
+namespace ServiceStation.Models
 {
     public class Order : Entity
     {
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
 
         public double OrderAmount { get; set; }
 

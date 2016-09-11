@@ -1,37 +1,44 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Service";
 }
+<div id="preloder"><img src="~/Image/preloder.gif" /></div>
 
 <div class="container">
     <ul class="nav nav-tabs">
-        <li class="active"><a href="#home" data-toggle="tab">Registration</a></li>
-        <li><a href="#profile" data-toggle="tab">Clients</a></li>
-        <li><a href="#messages" data-toggle="tab">Orders</a></li>
-        <li><a href="#settings" data-toggle="tab">Automobiles</a></li>
+        <li id="Registration-tab" class="active"><a href="#Registration" data-toggle="tab">Registration</a></li>
+        <li id="Account-tab"><a href="#Account" data-toggle="tab">Account</a></li>
+        <li><a href="#Orders-tab" data-toggle="tab">Orders</a></li>
+        <li><a href="#Automobiles-tab" data-toggle="tab">Automobiles</a></li>
     </ul>
 
     <div class="tab-content">
-        <div class="tab-pane fade in active" id="home">
+        <div class="tab-pane fade in active" id="Registration">
             <div id="Check-wrapper" class="container">
                 @Html.Partial("_check")
             </div>
             <div id="Registration-wrapper" class="container">
             </div>
+
         </div>
-        <div class="tab-pane fade" id="profile">
-            <div id="Clients-wrapper">
-                2
+        <div class="tab-pane fade" id="Account">
+            <div id="Find-Account-wrapper">
+                @Html.Partial("_list")
+            </div>
+            <div id="Account-wrapper">
             </div>
         </div>
-        <div class="tab-pane fade" id="messages">
+        <div class="tab-pane fade" id="Orders-tab">
+            <h2>Orders <a id="refresh-order"><span class="glyphicon glyphicon-refresh"></span></a></h2>
             <div id="Orders-wrapper">
-                3
+                @Html.Partial("_Orders")
             </div>
         </div>
-        <div class="tab-pane fade" id="settings">
+        <div class="tab-pane fade" id="Automobiles-tab">
+            <h2>Cars <a id="refresh-auto"><span class="glyphicon glyphicon-refresh"></span></a></h2>
             <div id="Automobiles-wrapper">
-                4
+                @Html.Partial("_Cars")
             </div>
         </div>
+        
     </div>
 </div>

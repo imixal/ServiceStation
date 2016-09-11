@@ -15,5 +15,7 @@ namespace ServiceStation.DataAccessLayer.Interfaces
         void Delete(T entity);
 
         IReadOnlyCollection<T> GetAll();
+
+        T GetById(int id);
     }
 }

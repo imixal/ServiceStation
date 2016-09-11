@@ -80,6 +80,12 @@ namespace ServiceStation.Controllers
             OrderService.AddOrder(date, amount, status, clientId, autoId);
             return GetAccount(clientId);
         }
-        
+        public ActionResult DeleteOrder(int orderId, int clientId)
+        {
+            OrderService.DeleteOrder(orderId);
+            return GetAccount(clientId);
+
+        }
+
     }
 }

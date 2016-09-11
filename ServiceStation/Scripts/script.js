@@ -16,8 +16,6 @@ $(document).ready(function () {
                     $("#preloder").hide();
                     $(".modal-backdrop").detach();
                     $("body").css("overflowY", "scroll");
-                    $("#Account-wrapper").empty().append(data);
-                    UpdateUser();
                     $("#refresh-order").trigger("click");
                 });
             });
@@ -34,8 +32,6 @@ $(document).ready(function () {
                     $("#preloder").hide();
                     $(".modal-backdrop").detach();
                     $("body").css("overflowY", "scroll");
-                    $("#Account-wrapper").empty().append(data);
-                    UpdateUser();
                     $("#refresh-auto").trigger("click");
 
                 });
@@ -44,7 +40,7 @@ $(document).ready(function () {
                 var has = $(this).parent().prev().text() == "Yes";
                 if (has) {
                     $("#modal-body-deletelist").empty().text("You can't delete car, because  car has order.");
-                    $("#delete-button").hide();
+                    $("#deletelist-button").hide();
                 }
                 else {
                     $("#modal-body-deletelist").attr("data-id", $(this).attr("data-id"));
@@ -78,8 +74,7 @@ $(document).ready(function () {
             $("#preloder").hide();
             $(".modal-backdrop").detach();
             $("body").css("overflowY", "scroll");
-            $("#Account-wrapper").empty().append(data);
-            UpdateUser();
+            $("#refresh-order").trigger("click");
 
         });
     });
@@ -89,8 +84,6 @@ $(document).ready(function () {
             $("#preloder").hide();
             $(".modal-backdrop").detach();
             $("body").css("overflowY", "scroll");
-            $("#Account-wrapper").empty().append(data);
-            UpdateUser();
             $("#refresh-auto").trigger("click");
 
         });
@@ -99,7 +92,7 @@ $(document).ready(function () {
         var has = $(this).parent().prev().text() == "Yes";
         if (has) {
             $("#modal-body-deletelist").empty().text("You can't delete car, because  car has order.");
-            $("#delete-button").hide();
+            $("#deletelist-button").hide();
         }
         else {
             $("#modal-body-deletelist").attr("data-id", $(this).attr("data-id"));
@@ -160,6 +153,10 @@ function UpdateUser() {
         $("#modal-body-change").attr("data-id", $(this).attr("data-id"));
         $("#InputDate").val($(this).parent().prev().prev().prev().text());
     });
+    $("button[data-target='#DeleteOrder']").click(function () {
+        $("#modal-body-delete-order").attr("data-id", $(this).attr("data-id"));
+        $("#InputDate").val($(this).parent().prev().prev().prev().text());
+    });
     $("button[data-target='#AddOrder']").click(function () {
         $("#modal-body-addOrder").attr("data-id", $(this).attr("data-id"));
     });
@@ -197,6 +194,18 @@ function UpdateUser() {
             UpdateUser();
         });
     });
+    $("#delete-order-button").click(function () {
+        $("#preloder").show();
+        $.post("Home/DeleteOrder", { "orderId": $("#modal-body-delete-order").attr("data-id"), "clientId": $("table").attr("data-Id") }).done(function (data) {
+            $("#preloder").hide();
+            $(".modal-backdrop").detach();
+            $("body").css("overflowY", "scroll");
+            $("#Account-wrapper").empty().append(data);
+            UpdateUser();
+            $(".closer").trigger('click');
+
+        });
+    });
     $("#addOrder-button").click(function () {
         $("#preloder").show();
         $.post("Home/AddOrder", { "date": $("#InputNewDate").val(), "amount": $("#InputNewAmount").val(), "status": $("#InputNewStatus").val(), "clientId": $("table").attr("data-Id"), "autoId": $("#modal-body-addOrder").attr("data-id") }).done(function (data) {
@@ -207,4 +216,5 @@ function UpdateUser() {
             UpdateUser();
         });
     });
+
 };

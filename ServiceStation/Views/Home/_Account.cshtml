@@ -1,0 +1,236 @@
+﻿
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-10">
+        <h2>Data</h2>
+        <table class="table table-responsive" data-Id="@ViewBag.client.Id">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>@ViewBag.client.FirstName</th>
+                    <th>@ViewBag.client.LastName</th>
+                    <th>@ViewBag.client.DateOfBirth</th>
+                    <th>@ViewBag.client.Address</th>
+                    <th>@ViewBag.client.Phone</th>
+                    <th>@ViewBag.client.Email</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-offset-2 col-lg-8">
+        <h2>Cars</h2>
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Vin</th>
+                    <th class="text-right" colspan="5"><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#AddCar">Add Car</button></th>
+                </tr>
+                <tr > <th colspan="5"></th></tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.client.Cars)
+                {
+                    <tr>
+                        <th>@item.Make</th>
+                        <th>@item.Model</th>
+                        <th>@item.Year</th>
+                        <th>@item.VIN</th>
+                        <th class="text-right">
+                            <button  class="btn btn-primary btn-sm" data-Id="@item.Id" data-toggle="modal" data-target="#Delete">Delete</button>
+                        </th>
+                    </tr>  
+                    <tr>
+                        <th>Orders:</th>
+                        <th>Date</th>
+                        <th>Order Amount</th>
+                        <th>Status</th>
+                        <th class="text-right"><button class="btn btn-primary btn-sm" data-toggle="modal" data-Id="@item.Id" data-target="#AddOrder">Add Order</button></th>
+                    </tr>                 
+                    foreach (var order in ViewBag.client.Orders)
+                    {
+                        if (order.OrderAuto.Id == item.Id)
+                        {
+                            if (order.Status.ToString() == "Completed")
+                            {
+                                <tr  class="success order">
+                                    <th></th>
+                                    <th class="order-date">@order.Date.ToShortDateString()</th>
+                                    <th>@order.OrderAmount</th>
+                                    <th>@order.Status</th>
+                                    <th class="text-right">
+                                        <button class="btn btn-primary btn-sm" data-Id="@order.Id" data-toggle="modal" data-target="#DeleteOrder">Delete</button>
+                                        <button class="btn btn-primary btn-sm" data-Id="@order.Id" data-toggle="modal" data-target="#Change">Change</button>
+                                    </th>
+                                </tr>
+                            }
+                            if (order.Status.ToString() == "In Progress")
+                            {
+                                <tr class="warning order">
+                                    <th></th>
+                                    <th class="order-date">@order.Date.ToShortDateString()</th>
+                                    <th>@order.OrderAmount</th>
+                                    <th>@order.Status</th>
+                                    <th class="text-right">
+                                        <button class="btn btn-primary btn-sm" data-Id="@order.Id" data-toggle="modal" data-target="#DeleteOrder">Delete</button>
+                                        <button class="btn btn-primary btn-sm" data-Id="@order.Id" data-toggle="modal" data-target="#Change">Change</button>
+                                    </th>
+                                </tr>
+                            }
+                            if (order.Status.ToString() == "Cancelled")
+                            {
+                                <tr class="danger order">
+                                    <th></th>
+                                    <th class="order-date">@order.Date.ToShortDateString()</th>
+                                    <th>@order.OrderAmount</th>
+                                    <th>@order.Status</th>
+                                    <th class="text-right">
+                                        <button class="btn btn-primary btn-sm" data-Id="@order.Id" data-toggle="modal" data-target="#Change">Change</button>
+                                        <button class="btn btn-primary btn-sm" data-Id="@order.Id" data-toggle="modal" data-target="#DeleteOrder">Delete</button>
+                                    </th>
+                                </tr>
+                            }
+                        }
+
+                    }
+                    <tr>
+                        <th class="text-right" colspan="5"></th>
+                    </tr>
+                    
+                }
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="AddCar" tabindex="-1" role="dialog" aria-labelledby="myCarlLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myCarlLabel">Add Car</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="InputMake">Make</label>
+                    <input type="text" class="form-control" id="InputMake" placeholder="Enter Make">
+                </div>
+                <div class="form-group">
+                    <label for="InputModel">Model</label>
+                    <input type="text" class="form-control" id="InputModel" placeholder="Enter Model">
+                </div>
+                <div class="form-group">
+                    <label for="InputYear">Year</label>
+                    <input type="text" class="form-control" id="InputYear" placeholder="Enter Year">
+                </div>
+                <div class="form-group">
+                    <label for="InputVIN">VIN</label>
+                    <input type="text" class="form-control" id="InputVIN" placeholder="Enter VIN">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default closer" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="AddCar-button">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="AddOrder" tabindex="-1" role="dialog" aria-labelledby="myOrderlLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myOrderLabel">Add Order</h4>
+            </div>
+            <div class="modal-body" id="modal-body-addOrder">
+                <div class="form-group">
+                    <label for="InputNewDate">Date </label>
+                    <div class='input-group date'>
+                        <input type='text' class="form-control" id='InputNewDate' />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputNewAmount">Amount</label>
+                    <input type="text" class="form-control" id="InputNewAmount" placeholder="Enter Amount">
+                </div>
+                <div class="form-group">
+                    <label for="InputNewStatus">Status</label>
+                    <select type="text" class="form-control" id="InputNewStatus" placeholder="Enter Status">
+                        <option>In Progress</option>
+                        <option>Completed</option>
+                        <option>Cancelled</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default closer" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addOrder-button">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="Change" tabindex="-1" role="dialog" aria-labelledby="myChangeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myChangeLabel">Change</h4>
+            </div>
+            <div class="modal-body" id="modal-body-change">
+                <div class="form-group">
+                    <label for="InputDate">Date</label>
+                    <input type="text" class="form-control" id="InputDate" disabled placeholder="Enter Date">
+                </div>
+                <div class="form-group">
+                    <label for="InputAmount">Amount</label>
+                    <input type="text" class="form-control" id="InputAmount"  placeholder="Enter Amount">
+                </div>
+                <div class="form-group">
+                    <label for="InputStatus">Status</label>
+                    <select type="text" class="form-control" id="InputStatus" placeholder="Enter Status">
+                        <option>In Progress</option>
+                        <option>Completed</option>
+                        <option>Cancelled</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default closer" data-dismiss="modal">Close</button>
+                <button  type="button" class="btn btn-primary" id="change-button">Change</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="Delete" tabindex="-1" role="dialog" aria-labelledby="myDeleteLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myDeleteLabel">Delete</h4>
+            </div>
+            <div class="modal-body" id="modal-body-delete">
+                Delete
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default closer" data-dismiss="modal">Close</button>
+                <button  type="button"  class="btn btn-primary" id="delete-button" >Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

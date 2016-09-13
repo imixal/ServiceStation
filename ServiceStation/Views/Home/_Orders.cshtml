@@ -1,0 +1,82 @@
+﻿<div class="row">
+    <div class="col-lg-offset-2 col-lg-8">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Order Amount</th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.orders)
+                {
+                    if (item.Status.ToString() == "Completed")
+                    {
+                        <tr class="success">
+                            <th>@item.Date.ToShortDateString()</th>
+                            <th>@item.OrderAmount</th>
+                            <th >@item.OrderClient.FirstName @item.OrderClient.LastName</th>
+                            <th>@item.Status</th>
+                            <th class="text-right"><button  class="btn btn-primary btn-sm"  data-client-Id="@item.OrderClient.Id" data-Id="@item.Id" data-toggle="modal" data-target="#Changelist">Change</button></th>
+                        </tr>
+                    }
+                    if (item.Status.ToString() == "In Progress")
+                    {
+                        <tr class="warning">
+                            <th>@item.Date.ToShortDateString()</th>
+                            <th>@item.OrderAmount</th>
+                            <th>@item.OrderClient.FirstName @item.OrderClient.LastName</th>
+                            <th>@item.Status</th>
+                            <th class="text-right"><button class="btn btn-primary btn-sm" data-client-Id="@item.OrderClient.Id" data-Id="@item.Id" data-toggle="modal" data-target="#Changelist">Change</button></th>
+                        </tr>
+                    }
+                    if (item.Status.ToString() == "Cancelled")
+                    {
+                        <tr class="danger">
+                            <th>@item.Date.ToShortDateString()</th>
+                            <th>@item.OrderAmount</th>
+                            <th>@item.OrderClient.FirstName @item.OrderClient.LastName</th>
+                            <th>@item.Status</th>
+                            <th class="text-right"> <button class="btn btn-primary btn-sm" data-client-Id="@item.OrderClient.Id" data-Id="@item.Id" data-toggle="modal" data-target="#Changelist">Change</button></th>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="Changelist" tabindex="-1" role="dialog" aria-labelledby="mylistlLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="mylistLabel">Change</h4>
+            </div>
+            <div class="modal-body" id="modal-body-changelist">
+                <div class="form-group">
+                    <label for="InputDatelist">Date</label>
+                    <input type="text" class="form-control" id="InputDatelist" disabled placeholder="Enter Date">
+                </div>
+                <div class="form-group">
+                    <label for="InputAmountlist">Amount</label>
+                    <input type="text" class="form-control" id="InputAmountlist" placeholder="Enter Amount">
+                </div>
+                <div class="form-group">
+                    <label for="InputStatuslist">Status</label>
+                    <select type="text" class="form-control" id="InputStatuslist" placeholder="Enter Status">
+                        <option>In Progress</option>
+                        <option>Completed</option>
+                        <option>Cancelled</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="changelist-button">Change</button>
+            </div>
+        </div>
+    </div>
+</div>

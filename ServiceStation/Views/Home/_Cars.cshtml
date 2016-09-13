@@ -1,0 +1,57 @@
+﻿<div class="row">
+    <div class="col-lg-offset-1 col-lg-10">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Vin</th>
+                    <th>Owner</th>
+                    <th>Orders</th>
+                    <th></th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.Cars)
+                {
+                    <tr>
+                        <th>@item.Make</th>
+                        <th>@item.Model</th>
+                        <th>@item.Year</th>
+                        <th>@item.VIN</th>
+                        <th >@item.ClientAuto.FirstName  @item.ClientAuto.LastName</th>
+                       
+                            @if (item.Orders.Count != 0)
+                            {
+                               <th>Yes</th> 
+                            }
+                            else
+                            { 
+                                <th>No</th>
+                            }
+                        <th><button class="btn btn-primary btn-sm" data-Id="@item.Id" data-client-Id="@item.ClientAuto.Id" data-toggle="modal" data-target="#Deletelist">Delete</button></th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="Deletelist" tabindex="-1" role="dialog" aria-labelledby="myDeletelistLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myDeletelistLabel">Delete</h4>
+            </div>
+            <div class="modal-body" id="modal-body-deletelist">
+                Delete
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="deletelist-button">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
